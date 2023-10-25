@@ -1,0 +1,48 @@
+﻿@model DomenicaEscobar_ExamenP1.Models.DomenicaEscobar_Tabla
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>DomenicaEscobar_Tabla</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="DEAtributo1" class="control-label"></label>
+                <input asp-for="DEAtributo1" class="form-control" />
+                <span asp-validation-for="DEAtributo1" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="DEAtributo2" /> @Html.DisplayNameFor(model => model.DEAtributo2)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="DEAtributo3" class="control-label"></label>
+                <input asp-for="DEAtributo3" class="form-control" />
+                <span asp-validation-for="DEAtributo3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DEFecha" class="control-label"></label>
+                <input asp-for="DEFecha" class="form-control" />
+                <span asp-validation-for="DEFecha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

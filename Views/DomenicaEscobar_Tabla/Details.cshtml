@@ -1,0 +1,42 @@
+﻿@model DomenicaEscobar_ExamenP1.Models.DomenicaEscobar_Tabla
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>DomenicaEscobar_Tabla</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DEAtributo1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DEAtributo1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DEAtributo2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DEAtributo2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DEAtributo3)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DEAtributo3)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DEFecha)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DEFecha)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
